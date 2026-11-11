@@ -1,0 +1,22 @@
+{
+  "when": "2026-08-27T15:16:42.729Z",
+  "errors": [],
+  "bursts": [
+    {
+      "id": "ride",
+      "fps": 76.8,
+      "frames": 14,
+      "sheet": "shots/g1/ride-sheet.png",
+      "mp4": "shots/g1/ride.mp4",
+      "note": "Mount and gallop — the crossing-the-island feeling."
+    },
+    {
+      "id": "combat",
+      "fps": 79.3,
+      "frames": 15,
+      "sheet": "shots/g1/combat-sheet.png",
+      "mp4": "shots/g1/combat.mp4",
+      "note": "Attack chain into parry — impact, arcs, reactions."
+    }
+  ]
+}

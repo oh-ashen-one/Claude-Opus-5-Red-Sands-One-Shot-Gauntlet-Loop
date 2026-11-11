@@ -1,0 +1,34 @@
+{
+  "when": "2026-08-30T22:25:20.978Z",
+  "machine": {
+    "empty_webgl_ms_median": 11.4,
+    "empty_webgl_ms_p95": 26.8,
+    "empty_webgl_fps_median": 87.7,
+    "threshold_ms": 8,
+    "saturated": true,
+    "warning": "MACHINE_SATURATED: an EMPTY WebGL page costs p50=11.4ms / p95=26.8ms on this machine (floor should be <=8ms). Every per-pose number below is dominated by machine load. DO NOT read any of it as a game regression."
+  },
+  "errors": [],
+  "shots": [
+    {
+      "id": "01-sunset-ridge",
+      "note": "Hero shot: ridge line, low sun dead ahead.",
+      "file": "shots/wave-i/01-sunset-ridge.png",
+      "fps": 91.7,
+      "ms_median": 10.9,
+      "ms_p95": 27.1,
+      "frames_over_20ms": 32,
+      "samples": 440
+    },
+    {
+      "id": "06-forest",
+      "note": "Inland forest interior - canopy and long shadows. Moved off a steep hillside inside a squad spawn radius, where the duel solver took the camera rig and the frame was a diagonal wall of ground. This vantage measures slope 0.000 with every sampled ring cell tree-eligible.",
+      "file": "shots/wave-i/06-forest.png",
+      "fps": 88.5,
+      "ms_median": 11.3,
+      "ms_p95": 27.1,
+      "frames_over_20ms": 33,
+      "samples": 434
+    }
+  ]
+}

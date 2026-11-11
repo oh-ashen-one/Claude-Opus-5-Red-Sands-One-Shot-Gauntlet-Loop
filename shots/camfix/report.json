@@ -1,0 +1,30 @@
+{
+  "when": "2026-08-31T16:17:48.391Z",
+  "errors": [],
+  "shots": [
+    {
+      "id": "01-sunset-ridge",
+      "fps": 44.2,
+      "note": "Hero shot: ridge line, low sun dead ahead.",
+      "file": "shots/camfix/01-sunset-ridge.png"
+    },
+    {
+      "id": "03-coast",
+      "fps": 43.1,
+      "note": "Shoreline with the sun road on the water.",
+      "file": "shots/camfix/03-coast.png"
+    },
+    {
+      "id": "04-river-valley",
+      "fps": 34.7,
+      "note": "River cut, cross-lit.",
+      "file": "shots/camfix/04-river-valley.png"
+    },
+    {
+      "id": "06-forest",
+      "fps": 33.1,
+      "note": "Inland shelf — canopy and long shadows.",
+      "file": "shots/camfix/06-forest.png"
+    }
+  ]
+}

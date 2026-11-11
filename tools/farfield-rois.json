@@ -1,0 +1,58 @@
+{
+  "_doc": [
+    "Sky and far-landform regions for the far-field value metric, as fractions of",
+    "frame width/height: [x0, x1, y0, y1].",
+    "",
+    "These are FIXED per pose, not detected, and that is deliberate. Automatic",
+    "horizon finding was tried twice and failed both times on exactly the frames",
+    "this metric has to grade — see the module docstring in tools/farfield.py. The",
+    "poses in tools/poses.json pin camera x/z/face/time, so a distant ridge lands",
+    "in the same part of the frame every wave and a fixed region stays valid",
+    "across waves. Re-check the overlays with --overlay if a pose is ever retimed",
+    "or moved.",
+    "",
+    "'sky' must contain only open sky. 'land' must contain only FAR landform, no",
+    "near terrain, no tree canopy, no character. Chosen by reading a 16x12 mean-",
+    "luminance grid of each wave-L frame and confirming against the PNG.",
+    "",
+    "Poses with no far landform to grade are listed in no_far_landform. Grading",
+    "sky-vs-land on those is meaningless, so the tool refuses rather than",
+    "inventing a number."
+  ],
+
+  "poses": {
+    "01-sunset-ridge": {
+      "sky":  [0.68, 1.00, 0.00, 0.08],
+      "land": [0.68, 1.00, 0.16, 0.30],
+      "note": "Hero shot. Right half only: the left mountain breaks the top edge of frame, so a sky band there would contain mountain. Sun is left of centre, so this pair is sun-adjacent on neither side and is the cleanest same-column comparison in the set."
+    },
+    "03-coast": {
+      "sky":  [0.00, 0.42, 0.00, 0.10],
+      "land": [0.00, 0.42, 0.20, 0.28],
+      "note": "Left half: the sea horizon sits near y 0.30, so the far band has to stay above it to avoid metering water."
+    },
+    "05-summit": {
+      "sky":  [0.25, 0.66, 0.00, 0.10],
+      "land": [0.25, 0.66, 0.18, 0.28]
+    },
+    "07-run": {
+      "sky":  [0.78, 0.92, 0.00, 0.10],
+      "land": [0.78, 0.92, 0.20, 0.30],
+      "note": "Corrected in wave M; the original pair was x 0.50-0.92 for both bands and was measuring the wrong thing. The sun sits upper-left with godrays across frame, and a column profile of the old land band showed 194 / 184 / 172 / 160 / 150 / 150 left to right: the left two thirds are sun-adjacent glare and open hazy air with only faint distant ridges, not landform. Averaging glare at 194 into 'land' inflated the deficit. The only discrete far landform is the volcano cone at x 0.78-0.95. Sky is narrowed to the same columns so the pair is column-matched, which matters more here than anywhere else in the set because the sun gradient across this frame is steep: the wide sky band reads 133.0 against 113.6 for the cone's own columns, a 19-point difference that is pure sun azimuth. Column-matched, the wave-M fix takes this pose from -36.2 to -1.3. Using the wide sky band instead reports +16.6 and a spurious pass."
+    }
+  },
+
+  "references": {
+    "field_24": {
+      "sky":  [0.06, 0.56, 0.08, 0.20],
+      "land": [0.06, 0.31, 0.33, 0.41],
+      "note": "The one open golden-hour vista in the reference set. Sky band is the bright air left of and above the sun; land band is the soft backlit hill below it. This pair is what produces the +130 figure the wave-M target is written against. NOTE the asymmetry when comparing to our poses: this sky band is sun-adjacent and the hill is fully backlit, which is the most extreme separation available in the references, not a typical one."
+    }
+  },
+
+  "no_far_landform": {
+    "02-grass-field": "Tree canopy occupies the upper frame; no clean far ridge band exists.",
+    "06-forest": "Forest interior. No far landform at all - this is what 3 of the 4 references also look like.",
+    "08-night": "Night. Nothing far is lit."
+  }
+}

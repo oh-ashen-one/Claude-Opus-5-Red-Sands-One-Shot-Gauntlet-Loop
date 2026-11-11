@@ -1,0 +1,14 @@
+{
+  "when": "2026-08-27T14:24:45.401Z",
+  "errors": [],
+  "bursts": [
+    {
+      "id": "sprint",
+      "fps": 83.3,
+      "frames": 12,
+      "sheet": "shots/burst/sprint-sheet.png",
+      "mp4": "shots/burst/sprint.mp4",
+      "note": "Sprint through grass; does the field react to the runner?"
+    }
+  ]
+}

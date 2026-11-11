@@ -1,0 +1,20 @@
+{
+  "when": "2026-08-27T03:40:08.519Z",
+  "errors": [
+    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "shots": [
+    {
+      "id": "01-sunset-ridge",
+      "fps": 74.6,
+      "note": "Hero shot: ridge line, low sun dead ahead.",
+      "file": "shots/base4/01-sunset-ridge.png"
+    },
+    {
+      "id": "02-grass-field",
+      "fps": 80.9,
+      "note": "Open meadow into the sun — the pampas signature.",
+      "file": "shots/base4/02-grass-field.png"
+    }
+  ]
+}

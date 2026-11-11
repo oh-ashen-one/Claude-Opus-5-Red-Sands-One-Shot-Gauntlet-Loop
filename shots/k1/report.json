@@ -1,0 +1,26 @@
+{
+  "when": "2026-08-27T23:41:35.633Z",
+  "errors": [
+    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "shots": [
+    {
+      "id": "01-sunset-ridge",
+      "fps": 57.7,
+      "note": "Hero shot: ridge line, low sun dead ahead.",
+      "file": "shots/k1/01-sunset-ridge.png"
+    },
+    {
+      "id": "05-summit",
+      "fps": 50.8,
+      "note": "High vantage, full draw distance.",
+      "file": "shots/k1/05-summit.png"
+    },
+    {
+      "id": "08-night",
+      "fps": 48.3,
+      "note": "Night read — deep blue with stars, never flat black.",
+      "file": "shots/k1/08-night.png"
+    }
+  ]
+}

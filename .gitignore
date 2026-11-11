@@ -1,0 +1,50 @@
+node_modules/
+.vite-cache/
+.DS_Store
+*.log
+.env
+
+# Throwaway A/B perf runs and raw capture payloads. The contact sheets, mp4s,
+# spectrograms and pose PNGs are the evidence and stay tracked; the per-frame
+# dumps and WAVs behind them are regenerable and enormous.
+shots/ab-*/
+shots/**/f[0-9][0-9][0-9].jpg
+shots/**/f[0-9][0-9].png
+shots/audio/*.wav
+
+# Reference frames are Ghost of Tsushima screenshots used as the internal visual
+# bar (docs/CRITIC-RUBRIC.md). Not ours to redistribute — keep them local.
+# Put your own reference screenshots in this folder if you run the critic loop.
+references/
+
+# Scratch captures: probe sweeps, motion bursts, per-lane verification runs.
+# Hundreds of MB each. Only the judged sets below are committed as evidence.
+shots/judge-motion/
+shots/probe-motion/
+shots/probe-motion-hi/
+shots/probe-quality/
+shots/harness-verify/
+shots/verify-wind/
+shots/stipple-fix/
+shots/horse-fix/
+shots/preview/
+shots/waveD/
+
+# Bisect and isolation scratch. These are single-pose captures taken while
+# root-causing (reverting one file at a time, bracketing a parameter). The
+# CONCLUSIONS live in the commit messages with their numbers; the frames
+# themselves are disposable and run to several MB each.
+shots/bis-*/
+shots/bisect-*/
+shots/isolate/
+shots/shadow-ab/
+shots/judge-e-motion/
+shots/f-wind-corridor/
+shots/verify-*/
+
+# Wave-M scratch. probe-* covers the baseline re-measurements and the settle
+# sweep that tested (and rejected) the "captures fire mid-adaptation" claim —
+# see docs/FOUNDATION.md #10, which carries the numbers. __pycache__ appears the
+# first time anything imports tools/farfield.py rather than shelling out to it.
+shots/probe-*/
+tools/__pycache__/

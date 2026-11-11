@@ -1,0 +1,188 @@
+[
+  {
+    "id": "walk",
+    "time": 0.722,
+    "x": -681,
+    "z": 363,
+    "face": -9,
+    "frames": 12,
+    "gap": 0.16,
+    "steps": [
+      {
+        "at": 0,
+        "input": {
+          "move": {
+            "x": 0,
+            "y": 1
+          },
+          "sprint": false
+        }
+      }
+    ],
+    "note": "Walk cycle, ground adaptation, cloth."
+  },
+  {
+    "id": "sprint",
+    "time": 0.722,
+    "x": -681,
+    "z": 363,
+    "face": -9,
+    "frames": 12,
+    "gap": 0.14,
+    "steps": [
+      {
+        "at": 0,
+        "input": {
+          "move": {
+            "x": 0,
+            "y": 1
+          },
+          "sprint": true
+        }
+      }
+    ],
+    "note": "Sprint through grass; does the field react to the runner?"
+  },
+  {
+    "id": "turn",
+    "time": 0.722,
+    "x": -681,
+    "z": 363,
+    "face": -9,
+    "frames": 12,
+    "gap": 0.16,
+    "steps": [
+      {
+        "at": 0,
+        "input": {
+          "move": {
+            "x": 1,
+            "y": 1
+          },
+          "sprint": true
+        }
+      },
+      {
+        "at": 1.0,
+        "input": {
+          "move": {
+            "x": -1,
+            "y": 1
+          },
+          "sprint": true
+        }
+      }
+    ],
+    "note": "Hard direction change \u2014 lean, foot plant, camera trail."
+  },
+  {
+    "id": "ride",
+    "time": 0.722,
+    "x": -536,
+    "z": 334,
+    "face": -9,
+    "frames": 14,
+    "gap": 0.16,
+    "lead": 2.8,
+    "steps": [
+      {
+        "at": 0,
+        "input": {
+          "mount": true,
+          "move": {
+            "x": 0,
+            "y": 0
+          },
+          "sprint": false
+        }
+      },
+      {
+        "at": 2.2,
+        "input": {
+          "move": {
+            "x": 0,
+            "y": 1
+          },
+          "sprint": true
+        }
+      }
+    ],
+    "note": "Mount and gallop \u2014 the crossing-the-island feeling. Neutral until 2.2s: moving earlier lands inside the ~2s mount transition and the samurai just sprints past the horse on foot. lead=2.8 spends the wind-up off-camera so all 14 frames are gallop."
+  },
+  {
+    "id": "combat",
+    "time": 0.722,
+    "x": -304,
+    "z": 131,
+    "face": 140,
+    "frames": 15,
+    "gap": 0.13,
+    "steps": [
+      {
+        "at": 0,
+        "input": {
+          "move": {
+            "x": 0,
+            "y": 1
+          }
+        }
+      },
+      {
+        "at": 0.5,
+        "input": {
+          "move": {
+            "x": 0,
+            "y": 0
+          },
+          "attack": true
+        }
+      },
+      {
+        "at": 0.9,
+        "input": {
+          "attack": true
+        }
+      },
+      {
+        "at": 1.3,
+        "input": {
+          "heavy": true
+        }
+      },
+      {
+        "at": 1.7,
+        "input": {
+          "parry": true
+        }
+      }
+    ],
+    "note": "Attack chain into parry \u2014 impact, arcs, reactions."
+  },
+  {
+    "id": "dodge",
+    "time": 0.722,
+    "x": -304,
+    "z": 131,
+    "face": 140,
+    "frames": 12,
+    "gap": 0.13,
+    "steps": [
+      {
+        "at": 0,
+        "input": {
+          "move": {
+            "x": 1,
+            "y": 0
+          }
+        }
+      },
+      {
+        "at": 0.4,
+        "input": {
+          "dodge": true
+        }
+      }
+    ],
+    "note": "Dodge/roll readability and recovery."
+  }
+]

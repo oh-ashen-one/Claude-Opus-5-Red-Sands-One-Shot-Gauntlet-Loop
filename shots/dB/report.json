@@ -1,0 +1,14 @@
+{
+  "when": "2026-08-28T01:53:37.142Z",
+  "errors": [
+    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "shots": [
+    {
+      "id": "06-forest",
+      "fps": 85.5,
+      "note": "Inland shelf — canopy and long shadows.",
+      "file": "shots/b/06-forest.png"
+    }
+  ]
+}

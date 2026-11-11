@@ -1,0 +1,14 @@
+{
+  "when": "2026-08-27T14:24:28.338Z",
+  "errors": [
+    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "shots": [
+    {
+      "id": "01-sunset-ridge",
+      "fps": 69.7,
+      "note": "Hero shot: ridge line, low sun dead ahead.",
+      "file": "shots/char2/01-sunset-ridge.png"
+    }
+  ]
+}

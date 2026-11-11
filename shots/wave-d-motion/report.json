@@ -1,0 +1,28 @@
+{
+  "when": "2026-08-31T08:03:53.442Z",
+  "errors": [],
+  "bursts": [
+    {
+      "id": "ride",
+      "fps": 28.2,
+      "frames": 90,
+      "sheet": "shots/wave-d-motion/ride-sheet.png",
+      "mp4": "shots/wave-d-motion/ride.mp4",
+      "note": "Mount and gallop — the crossing-the-island feeling.",
+      "captureFps": 31.06,
+      "spanSeconds": 2.87,
+      "method": "screencast"
+    },
+    {
+      "id": "combat",
+      "fps": 21.4,
+      "frames": 83,
+      "sheet": "shots/wave-d-motion/combat-sheet.png",
+      "mp4": "shots/wave-d-motion/combat.mp4",
+      "note": "Attack chain into parry — impact, arcs, reactions.",
+      "captureFps": 20.86,
+      "spanSeconds": 3.93,
+      "method": "screencast"
+    }
+  ]
+}

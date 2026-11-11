@@ -1,0 +1,14 @@
+.git
+node_modules
+dist
+shots
+tools
+docs
+references
+*.md
+/probe.mjs
+/sky.js
+/skydiag.mjs
+/skydome.mjs
+/skyflake.mjs
+/skyprobe.mjs

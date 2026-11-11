@@ -1,0 +1,3 @@
+Game never became ready.
+pageerror: missing ) after argument list
+pageerror: missing ) after argument list

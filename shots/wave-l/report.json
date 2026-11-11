@@ -1,0 +1,94 @@
+{
+  "when": "2026-08-31T02:14:09.671Z",
+  "machine": {
+    "empty_webgl_ms_median": 10.8,
+    "empty_webgl_ms_p95": 26.2,
+    "empty_webgl_fps_median": 92.6,
+    "threshold_ms": 8,
+    "saturated": true,
+    "warning": "MACHINE_SATURATED: an EMPTY WebGL page costs p50=10.8ms / p95=26.2ms on this machine (floor should be <=8ms). Every per-pose number below is dominated by machine load. DO NOT read any of it as a game regression."
+  },
+  "errors": [],
+  "shots": [
+    {
+      "id": "01-sunset-ridge",
+      "note": "Hero shot: ridge line, low sun dead ahead.",
+      "file": "shots/wave-l/01-sunset-ridge.png",
+      "fps": 93.5,
+      "ms_median": 10.7,
+      "ms_p95": 27.1,
+      "frames_over_20ms": 26,
+      "samples": 449
+    },
+    {
+      "id": "02-grass-field",
+      "note": "Open meadow into the sun — the pampas signature.",
+      "file": "shots/wave-l/02-grass-field.png",
+      "fps": 90.9,
+      "ms_median": 11,
+      "ms_p95": 27.1,
+      "frames_over_20ms": 31,
+      "samples": 436
+    },
+    {
+      "id": "03-coast",
+      "note": "Shoreline with the sun road on the water.",
+      "file": "shots/wave-l/03-coast.png",
+      "fps": 61.7,
+      "ms_median": 16.2,
+      "ms_p95": 19.7,
+      "frames_over_20ms": 13,
+      "samples": 346
+    },
+    {
+      "id": "04-river-valley",
+      "note": "River cut, cross-lit. Gravel-bar stance 0.9 m above the water, nearest water 9.2 m ahead, looking down-valley into the low sun. The old (-101, 276, face 60) put ZERO river surface in frame — it faced across the valley wall, which is why this pose kept grading as 'no water'.",
+      "file": "shots/wave-l/04-river-valley.png",
+      "fps": 75.8,
+      "ms_median": 13.2,
+      "ms_p95": 15,
+      "frames_over_20ms": 0,
+      "samples": 415
+    },
+    {
+      "id": "05-summit",
+      "note": "High vantage overlooking the field - full draw distance. Moved off the h=264.6 bald dome, which sits above both the grass (h>168) and tree (h>208) content thresholds.",
+      "file": "shots/wave-l/05-summit.png",
+      "fps": 90.9,
+      "ms_median": 11,
+      "ms_p95": 27.1,
+      "frames_over_20ms": 32,
+      "samples": 439
+    },
+    {
+      "id": "06-forest",
+      "note": "Inland forest interior - canopy and long shadows. Moved off a steep hillside inside a squad spawn radius, where the duel solver took the camera rig and the frame was a diagonal wall of ground. This vantage measures slope 0.000 with every sampled ring cell tree-eligible.",
+      "file": "shots/wave-l/06-forest.png",
+      "fps": 96.2,
+      "ms_median": 10.4,
+      "ms_p95": 25.7,
+      "frames_over_20ms": 25,
+      "samples": 463
+    },
+    {
+      "id": "07-run",
+      "note": "Locomotion through the field.",
+      "file": "shots/wave-l/07-run.png",
+      "fps": 91.7,
+      "ms_median": 10.9,
+      "ms_p95": 27.1,
+      "frames_over_20ms": 29,
+      "samples": 441
+    },
+    {
+      "id": "08-night",
+      "note": "Night read — deep blue with stars, never flat black.",
+      "file": "shots/wave-l/08-night.png",
+      "fps": 93.5,
+      "ms_median": 10.7,
+      "ms_p95": 26.7,
+      "frames_over_20ms": 27,
+      "samples": 451
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "claude-opus-5-red-sands-one-shot-gauntlet-loop",
+  "version": "1.0.0",
+  "description": "One-shot build attempt.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview --host --port ${PORT:-4173}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oh-ashen-one/Claude-Opus-5-Red-Sands-One-Shot-Gauntlet-Loop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/oh-ashen-one/Claude-Opus-5-Red-Sands-One-Shot-Gauntlet-Loop/issues"
+  },
+  "homepage": "https://github.com/oh-ashen-one/Claude-Opus-5-Red-Sands-One-Shot-Gauntlet-Loop#readme",
+  "dependencies": {
+    "puppeteer": "^25.9.0",
+    "three": "^0.185.1",
+    "vite": "^8.2.2"
+  }
+}

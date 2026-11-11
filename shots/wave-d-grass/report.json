@@ -1,0 +1,54 @@
+{
+  "when": "2026-08-31T07:54:22.864Z",
+  "errors": [],
+  "shots": [
+    {
+      "id": "01-sunset-ridge",
+      "fps": 32.3,
+      "note": "Hero shot: ridge line, low sun dead ahead.",
+      "file": "shots/wave-d-grass/01-sunset-ridge.png"
+    },
+    {
+      "id": "02-grass-field",
+      "fps": 26.5,
+      "note": "Open meadow into the sun — the pampas signature.",
+      "file": "shots/wave-d-grass/02-grass-field.png"
+    },
+    {
+      "id": "03-coast",
+      "fps": 30.8,
+      "note": "Shoreline with the sun road on the water.",
+      "file": "shots/wave-d-grass/03-coast.png"
+    },
+    {
+      "id": "04-river-valley",
+      "fps": 24.3,
+      "note": "River cut, cross-lit.",
+      "file": "shots/wave-d-grass/04-river-valley.png"
+    },
+    {
+      "id": "05-summit",
+      "fps": 38.8,
+      "note": "High vantage, full draw distance.",
+      "file": "shots/wave-d-grass/05-summit.png"
+    },
+    {
+      "id": "06-forest",
+      "fps": 27,
+      "note": "Inland shelf — canopy and long shadows.",
+      "file": "shots/wave-d-grass/06-forest.png"
+    },
+    {
+      "id": "07-run",
+      "fps": 27.1,
+      "note": "Locomotion through the field.",
+      "file": "shots/wave-d-grass/07-run.png"
+    },
+    {
+      "id": "08-night",
+      "fps": 31.8,
+      "note": "Night read — deep blue with stars, never flat black.",
+      "file": "shots/wave-d-grass/08-night.png"
+    }
+  ]
+}

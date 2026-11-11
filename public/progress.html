@@ -1,0 +1,54 @@
+<!doctype html><meta charset="utf-8"><title>Kaze no Michi — build progress</title>
+<style>
+  :root{--bg:#0e0d0c;--fg:#efe4d2;--dim:#9a8c78;--line:#2a2622;--ok:#7fae62;--bad:#c86a4a;--warn:#c9a94e}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.55 "Hiragino Mincho ProN",Georgia,serif}
+  header{padding:26px 34px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px}
+  h1{margin:0;font-size:19px;letter-spacing:.30em;font-weight:400}
+  .sub{color:var(--dim);font-size:12px;letter-spacing:.18em}
+  main{padding:26px 34px;max-width:1500px}
+  .wave{font-size:13px;letter-spacing:.22em;color:var(--warn);margin-bottom:18px}
+  table{width:100%;border-collapse:collapse;margin-bottom:34px}
+  th{text-align:left;font-weight:400;color:var(--dim);font-size:11px;letter-spacing:.16em;padding:9px 12px;border-bottom:1px solid var(--line)}
+  td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  .st{font-size:11px;letter-spacing:.12em;padding:2px 9px;border:1px solid currentColor;border-radius:2px;white-space:nowrap}
+  .pass{color:var(--ok)} .fail{color:var(--bad)} .run{color:var(--warn)} .wait{color:var(--dim)}
+  .gap{color:var(--dim);font-size:13px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(370px,1fr));gap:16px}
+  figure{margin:0}
+  img{width:100%;display:block;border:1px solid var(--line);background:#000}
+  figcaption{color:var(--dim);font-size:11px;letter-spacing:.13em;padding-top:7px}
+  .empty{color:var(--dim);padding:40px 0;text-align:center}
+</style>
+<header>
+  <h1>KAZE NO MICHI</h1>
+  <div class="sub" id="stamp">—</div>
+</header>
+<main>
+  <div class="wave" id="wave">—</div>
+  <div id="note" class="gap" style="margin-bottom:22px"></div>
+  <table><thead><tr><th>PIECE</th><th>STATUS</th><th>ROUNDS</th><th>BIGGEST REMAINING GAP</th></tr></thead>
+  <tbody id="rows"></tbody></table>
+  <div class="grid" id="shots"></div>
+</main>
+<script>
+const cls = s => ({pass:'pass',fail:'fail',building:'run',critiquing:'run'}[s] || 'wait');
+async function tick(){
+  try{
+    const r = await fetch('status.json?t='+Date.now());
+    const d = await r.json();
+    document.getElementById('wave').textContent = 'WAVE ' + (d.wave||'—').toUpperCase();
+    document.getElementById('stamp').textContent = d.updated || '';
+    document.getElementById('note').textContent = d.note || '';
+    document.getElementById('rows').innerHTML = (d.pieces||[]).map(p=>
+      `<tr><td>${p.name}</td>
+       <td><span class="st ${cls(p.status)}">${(p.status||'queued').toUpperCase()}</span></td>
+       <td>${p.rounds??0}</td><td class="gap">${p.gap||''}</td></tr>`).join('')
+      || '<tr><td colspan=4 class="empty">no pieces yet</td></tr>';
+    const s = d.shots||[];
+    document.getElementById('shots').innerHTML = s.map(f=>
+      `<figure><img src="shots/${f}?t=${Date.now()}"><figcaption>${f.replace('.png','')}</figcaption></figure>`).join('');
+  }catch(e){}
+}
+tick(); setInterval(tick, 4000);
+</script>

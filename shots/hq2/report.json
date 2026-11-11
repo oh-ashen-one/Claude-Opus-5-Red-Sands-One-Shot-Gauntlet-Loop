@@ -1,0 +1,20 @@
+{
+  "when": "2026-08-28T01:50:04.905Z",
+  "errors": [
+    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "shots": [
+    {
+      "id": "05-summit",
+      "fps": 110.2,
+      "note": "High vantage, full draw distance.",
+      "file": "shots/hq2/05-summit.png"
+    },
+    {
+      "id": "06-forest",
+      "fps": 89.3,
+      "note": "Inland shelf — canopy and long shadows.",
+      "file": "shots/hq2/06-forest.png"
+    }
+  ]
+}

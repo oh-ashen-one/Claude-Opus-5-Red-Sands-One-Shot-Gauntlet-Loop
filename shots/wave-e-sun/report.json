@@ -1,0 +1,24 @@
+{
+  "when": "2026-08-29T00:04:02.940Z",
+  "machine": {
+    "empty_webgl_ms_median": 10.8,
+    "empty_webgl_ms_p95": 26.4,
+    "empty_webgl_fps_median": 92.6,
+    "threshold_ms": 8,
+    "saturated": true,
+    "warning": "MACHINE_SATURATED: an EMPTY WebGL page costs p50=10.8ms / p95=26.4ms on this machine (floor should be <=8ms). Every per-pose number below is dominated by machine load. DO NOT read any of it as a game regression."
+  },
+  "errors": [],
+  "shots": [
+    {
+      "id": "05-summit",
+      "note": "High vantage overlooking the field - full draw distance. Moved off the h=264.6 bald dome, which sits above both the grass (h>168) and tree (h>208) content thresholds.",
+      "file": "shots/wave-e-sun/05-summit.png",
+      "fps": 91.7,
+      "ms_median": 10.9,
+      "ms_p95": 27.1,
+      "frames_over_20ms": 31,
+      "samples": 438
+    }
+  ]
+}

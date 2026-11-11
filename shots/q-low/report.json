@@ -1,0 +1,12 @@
+{
+  "when": "2026-08-27T23:28:00.035Z",
+  "errors": [],
+  "shots": [
+    {
+      "id": "01-sunset-ridge",
+      "fps": 30.3,
+      "note": "Hero shot: ridge line, low sun dead ahead.",
+      "file": "shots/q-low/01-sunset-ridge.png"
+    }
+  ]
+}

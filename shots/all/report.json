@@ -1,0 +1,50 @@
+{
+  "when": "2026-08-28T01:50:58.774Z",
+  "errors": [
+    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "shots": [
+    {
+      "id": "01-sunset-ridge",
+      "fps": 66,
+      "note": "Hero shot: ridge line, low sun dead ahead.",
+      "file": "shots/all/01-sunset-ridge.png"
+    },
+    {
+      "id": "02-grass-field",
+      "fps": 75.6,
+      "note": "Open meadow into the sun — the pampas signature.",
+      "file": "shots/all/02-grass-field.png"
+    },
+    {
+      "id": "03-coast",
+      "fps": 86.6,
+      "note": "Shoreline with the sun road on the water.",
+      "file": "shots/all/03-coast.png"
+    },
+    {
+      "id": "04-river-valley",
+      "fps": 99.8,
+      "note": "River cut, cross-lit.",
+      "file": "shots/all/04-river-valley.png"
+    },
+    {
+      "id": "05-summit",
+      "fps": 98.5,
+      "note": "High vantage, full draw distance.",
+      "file": "shots/all/05-summit.png"
+    },
+    {
+      "id": "06-forest",
+      "fps": 80.7,
+      "note": "Inland shelf — canopy and long shadows.",
+      "file": "shots/all/06-forest.png"
+    },
+    {
+      "id": "08-night",
+      "fps": 89.7,
+      "note": "Night read — deep blue with stars, never flat black.",
+      "file": "shots/all/08-night.png"
+    }
+  ]
+}

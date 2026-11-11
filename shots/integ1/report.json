@@ -1,0 +1,26 @@
+{
+  "when": "2026-08-27T03:31:22.795Z",
+  "errors": [
+    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "shots": [
+    {
+      "id": "01-sunset-ridge",
+      "fps": 81.6,
+      "note": "Hero shot: low sun across the ridge line.",
+      "file": "shots/integ1/01-sunset-ridge.png"
+    },
+    {
+      "id": "02-grass-field",
+      "fps": 77.6,
+      "note": "Wind through pampas — the signature.",
+      "file": "shots/integ1/02-grass-field.png"
+    },
+    {
+      "id": "03-coast",
+      "fps": 79.1,
+      "note": "Shoreline, sun road on water.",
+      "file": "shots/integ1/03-coast.png"
+    }
+  ]
+}

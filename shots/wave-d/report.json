@@ -1,0 +1,94 @@
+{
+  "when": "2026-08-28T23:00:51.881Z",
+  "machine": {
+    "empty_webgl_ms_median": 11.9,
+    "empty_webgl_ms_p95": 27.1,
+    "empty_webgl_fps_median": 84,
+    "threshold_ms": 8,
+    "saturated": true,
+    "warning": "MACHINE_SATURATED: an EMPTY WebGL page costs p50=11.9ms / p95=27.1ms on this machine (floor should be <=8ms). Every per-pose number below is dominated by machine load. DO NOT read any of it as a game regression."
+  },
+  "errors": [],
+  "shots": [
+    {
+      "id": "01-sunset-ridge",
+      "note": "Hero shot: ridge line, low sun dead ahead.",
+      "file": "shots/wave-d/01-sunset-ridge.png",
+      "fps": 72.5,
+      "ms_median": 13.8,
+      "ms_p95": 26.8,
+      "frames_over_20ms": 34,
+      "samples": 371
+    },
+    {
+      "id": "02-grass-field",
+      "note": "Open meadow into the sun — the pampas signature.",
+      "file": "shots/wave-d/02-grass-field.png",
+      "fps": 53.8,
+      "ms_median": 18.6,
+      "ms_p95": 22,
+      "frames_over_20ms": 72,
+      "samples": 295
+    },
+    {
+      "id": "03-coast",
+      "note": "Shoreline with the sun road on the water.",
+      "file": "shots/wave-d/03-coast.png",
+      "fps": 84.7,
+      "ms_median": 11.8,
+      "ms_p95": 27.1,
+      "frames_over_20ms": 33,
+      "samples": 416
+    },
+    {
+      "id": "04-river-valley",
+      "note": "River cut, cross-lit. Gravel-bar stance 0.9 m above the water, nearest water 9.2 m ahead, looking down-valley into the low sun. The old (-101, 276, face 60) put ZERO river surface in frame — it faced across the valley wall, which is why this pose kept grading as 'no water'.",
+      "file": "shots/wave-d/04-river-valley.png",
+      "fps": 87,
+      "ms_median": 11.5,
+      "ms_p95": 27.1,
+      "frames_over_20ms": 35,
+      "samples": 422
+    },
+    {
+      "id": "05-summit",
+      "note": "High vantage, full draw distance.",
+      "file": "shots/wave-d/05-summit.png",
+      "fps": 86.2,
+      "ms_median": 11.6,
+      "ms_p95": 27.1,
+      "frames_over_20ms": 34,
+      "samples": 420
+    },
+    {
+      "id": "06-forest",
+      "note": "Inland shelf — canopy and long shadows.",
+      "file": "shots/wave-d/06-forest.png",
+      "fps": 86.2,
+      "ms_median": 11.6,
+      "ms_p95": 27.1,
+      "frames_over_20ms": 37,
+      "samples": 415
+    },
+    {
+      "id": "07-run",
+      "note": "Locomotion through the field.",
+      "file": "shots/wave-d/07-run.png",
+      "fps": 80.6,
+      "ms_median": 12.4,
+      "ms_p95": 27,
+      "frames_over_20ms": 30,
+      "samples": 413
+    },
+    {
+      "id": "08-night",
+      "note": "Night read — deep blue with stars, never flat black.",
+      "file": "shots/wave-d/08-night.png",
+      "fps": 77.5,
+      "ms_median": 12.9,
+      "ms_p95": 25.5,
+      "frames_over_20ms": 28,
+      "samples": 382
+    }
+  ]
+}

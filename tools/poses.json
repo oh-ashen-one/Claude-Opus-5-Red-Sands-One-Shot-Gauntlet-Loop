@@ -1,0 +1,82 @@
+[
+  {
+    "id": "01-sunset-ridge",
+    "time": 0.7446,
+    "x": -536,
+    "z": 334,
+    "face": -9,
+    "settle": 2.5,
+    "note": "Hero shot: ridge line, low sun dead ahead."
+  },
+  {
+    "id": "02-grass-field",
+    "time": 0.7394,
+    "x": -681,
+    "z": 363,
+    "face": -9,
+    "settle": 2.5,
+    "note": "Open meadow into the sun \u2014 the pampas signature."
+  },
+  {
+    "id": "03-coast",
+    "time": 0.7465,
+    "x": -159,
+    "z": 885,
+    "face": -9,
+    "settle": 2.5,
+    "note": "Shoreline with the sun road on the water."
+  },
+  {
+    "id": "04-river-valley",
+    "time": 0.7358,
+    "x": -126,
+    "z": 330,
+    "face": -9,
+    "settle": 2.5,
+    "note": "River cut, cross-lit. Gravel-bar stance 0.9 m above the water, nearest water 9.2 m ahead, looking down-valley into the low sun. The old (-101, 276, face 60) put ZERO river surface in frame \u2014 it faced across the valley wall, which is why this pose kept grading as 'no water'."
+  },
+  {
+    "id": "05-summit",
+    "time": 0.7429,
+    "x": 460,
+    "z": -150,
+    "face": -9,
+    "settle": 2.5,
+    "note": "High vantage overlooking the field - full draw distance. Moved off the h=264.6 bald dome, which sits above both the grass (h>168) and tree (h>208) content thresholds."
+  },
+  {
+    "id": "06-forest",
+    "time": 0.7375,
+    "x": -373,
+    "z": -390,
+    "face": 140,
+    "settle": 2.5,
+    "note": "Inland forest interior - canopy and long shadows. Moved off a steep hillside inside a squad spawn radius, where the duel solver took the camera rig and the frame was a diagonal wall of ground. This vantage measures slope 0.000 with every sampled ring cell tree-eligible."
+  },
+  {
+    "id": "07-run",
+    "time": 0.741,
+    "x": -681,
+    "z": 363,
+    "face": -9,
+    "settle": 1.0,
+    "drive": {
+      "move": {
+        "x": 0,
+        "y": 1
+      },
+      "sprint": true
+    },
+    "hold": 2.0,
+    "note": "Locomotion through the field."
+  },
+  {
+    "id": "08-night",
+    "time": 0.02,
+    "x": -536,
+    "z": 334,
+    "face": -9,
+    "settle": 2.5,
+    "note": "Night read \u2014 deep blue with stars, never flat black."
+  }
+]

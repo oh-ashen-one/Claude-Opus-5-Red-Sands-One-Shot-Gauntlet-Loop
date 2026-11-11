@@ -1,0 +1,122 @@
+{
+  "wave": "D — finishing the rounds the spend limit cut short (camera feedback bug closed)",
+  "note": "Wave D. The camera feedback bug is fixed and verified: api.pitch was publishing the obstruction lift as framing pitch, combat.js servoed on it and subtracted the lift from the player's own elevation, and the loop closed on itself — the same pose measured 57.1 and 19.9 degrees on two runs. A private boomPitch now carries the lift. Re-probed on canonical, every pose is run-to-run stable and the horizon is in frame everywhere. Performance is still unmeasured: the stale lane servers were cleared but the run was cut short, and the box is now busy with unrelated work, so no fps number was recorded rather than a dirty one.",
+  "updated": "2026-09-02 00:20:00 UTC",
+  "pieces": [
+    {
+      "name": "— performance —",
+      "status": "fail",
+      "rounds": 3,
+      "gap": "STILL NEEDS A CLEAN MEASUREMENT — the attempt was made and produced nothing. Every lane vite server was stopped, but the run was interrupted before it shot a single frame (shots/latest/report.json holds an empty shots array). The capture machine was loaded by unrelated processes, so nothing measured there that day is worth recording. Take the reading only with the box otherwise idle."
+    },
+    {
+      "name": "— 720p white-out —",
+      "status": "pass",
+      "rounds": 1,
+      "gap": "FIXED. 720p frames now hold contrast, dark tree silhouettes and readable midtones where the whole frame was previously uniform white."
+    },
+    {
+      "name": "— playtest: jump + riding —",
+      "status": "pass",
+      "rounds": 1,
+      "gap": "Jump did not exist; now Space, 0.92m rise, gravity and landing kick. Horse was always rideable but nothing said so: F to mount, Shift to gallop (13.99 m/s vs 4.6 trotting, which is slower than sprinting on foot)."
+    },
+    {
+      "name": "grass · pampas fields",
+      "status": "building",
+      "rounds": 5,
+      "gap": "SHADOWS LANDED AND MERGED (+123/-16 in grass.js). Both the instanced blades and the ground carpet now sample the suns shadow map, using the pattern trees.js already had. Measured against the same grass lit, in-frame to cancel albedo: shadowed value 42.7% (target 40-45%), red x0.33, blue x1.34 — a genuine hue rotation to cool, not just a brightness cut. Lit grass unchanged at 99.6% luminance. Cost measured by A/B/A under identical contention: 0-6%, mean ~3%. Pose 01 still shows no canopy shadow and that is NOT a grass bug — proven by rendering bare terrain, which has always sampled shadows, and finding none there either: the sun sits 19.1 deg altitude dead ahead so every shadow points at the viewer and hides behind its caster. Awaiting fresh critic."
+    },
+    {
+      "name": "trees · maple, bamboo, pine",
+      "status": "building",
+      "rounds": 4,
+      "gap": "PARTLY FIXED: nearCull raised 1.4->4.5m so canopies no longer fill the lens. Still reads as cypress/acacia, not Japanese maple or bamboo. LOD impostors show as unshaded grey discs."
+    },
+    {
+      "name": "postfx · the film grade",
+      "status": "building",
+      "rounds": 4,
+      "gap": "FIXED by hand: veiling glare now accumulates with distance; gold push 1.0->0.45, aerial 0.55, contrast 1.12. Frame no longer crushes to one mustard hue."
+    },
+    {
+      "name": "vfx · leaves, petals, haze",
+      "status": "fail",
+      "rounds": 4,
+      "gap": "Leaves render as 1-4px unlit dark specks reading as sensor dust; need ~5x larger, backlit warm-orange, in coherent wind streams, masked off sky and far hills."
+    },
+    {
+      "name": "terrain · island silhouette",
+      "status": "fail",
+      "rounds": 4,
+      "gap": "NEW, unlogged: at h=264 the entire island collapses into uniform blown cream with no distance banding, tripping two automatic-fail conditions at once. Cause under bisection — fog, exposure/glare, and LOD-at-altitude all still live candidates. Not yet attributed to terrain."
+    },
+    {
+      "name": "sky · sun · light rig",
+      "status": "fail",
+      "rounds": 5,
+      "gap": "FIRST REAL JUDGMENT: 2/3/2, hobby not uncertain. NAMED GAP: nothing in any frame casts a shadow — grass under a wide tree canopy measures identical in brightness to open field — so the low warm key is a directionless ambient wash. CAUSE PROVEN: grass.js never samples the shadow map (trees.js has a working sunShadow() doing exactly that, terrain receives, grass does not), and grass covers the ground in every frame. Also named, for later rounds: no sun disc at all (brightest pixel 246, none above 250); the vignette is impersonating aerial perspective and inverts the depth ramp so near grass is darker than the far ridge; 22-28% of pixels clip a channel against 0.25% in the reference; night is a blue multiply over grey (median value 0.506 vs 0.161 reference) with no moonlight direction."
+    },
+    {
+      "name": "water · ocean, rivers, foam",
+      "status": "building",
+      "rounds": 2,
+      "gap": "IN BUILD on the named gap: give the sea a deep-water absorption colour so it stops rendering as the sky and sits darker and cooler than it, resolving the horizon into a line. Targets to beat: ocean currently measures brighter than the sky above it (red 251 vs 236), 23-30% of ocean pixels clipped at 254, largest row-to-row step through the horizon only ~6/255, night sea luminance sd 3.7/255."
+    },
+    {
+      "name": "character · samurai model",
+      "status": "building",
+      "rounds": 2,
+      "gap": "Merged, 1457 lines — expanded from my 323. Cloak still shows a flat grey panel from behind."
+    },
+    {
+      "name": "locomotion · traversal feel",
+      "status": "building",
+      "rounds": 1,
+      "gap": "Momentum model, slope cost and body tilt in. Needs dodge i-frames, step-up, and landing impact."
+    },
+    {
+      "name": "horse · gaits and riding",
+      "status": "fail",
+      "rounds": 1,
+      "gap": "FIRST JUDGMENT: 2/2/2 (form, surface, believability), hobby not uncertain, three automatic fails (seams and end-cap discs at every leg joint, floating geometry — withers rods, a girth hoop clear of the belly, reins ending in mid-air — and a wholly untextured hide measuring 0.8-6.6/255 of detail). NAMED GAP: the torso is one smooth capsule tapering to a rounded bullet at the rear, topline dead flat within 3px across the whole loin-and-croup span, so the horse has no hindquarters at all; it needs a croup rising above the loin, a gluteal mass whose point of buttock projects back past the tail root, and a stifle bulging forward."
+    },
+    {
+      "name": "camera · cinematography",
+      "status": "pass",
+      "rounds": 2,
+      "gap": "FIX VERIFIED ON CANONICAL AND MERGED. api.pitch published the obstruction lift as the framing pitch, and its one external consumer — the servo in combat.js (dPitch = 0.16 - gcam.pitch, written into inp.look.y) — read the lift back out and subtracted it from pitchUser, the elevation camera.js promises is never stolen back. Closed positive feedback. A separate private boomPitch now carries the lift; only the framing pitch leaves the file. PROOF, tools/probe-campitch.mjs, two runs of every pose on the canonical checkout: 06-forest, the lock-on pose that gave 57.1 and 19.9 degrees before, now reads 8.8 and 9.2. Every pose is run-to-run stable (14.3/14.3, 13.9/13.9, 9.2/9.2, 8.6/9.2) and the horizon is in frame everywhere at NDC 0.32-0.75, against the off-screen floor-plan framing before. The boom itself still varies between runs in the combat poses (04-river-valley 17.6 vs 11.1) — the obstruction ladder finding different solutions on uneven ground, which is its job now that it no longer leaks into framing."
+    },
+    {
+      "name": "combat · stances, parry, clash",
+      "status": "building",
+      "rounds": 1,
+      "gap": "First critic round in the projects history, in flight, on a real motion capture: 83 frames at 20.9/s over 3.9s of a two-hit light chain into a heavy into a parry."
+    },
+    {
+      "name": "ai · enemies and encounters",
+      "status": "building",
+      "rounds": 0,
+      "gap": "Merged, 2001 lines. Enemies present and engaging. Silhouettes still read as plain cones."
+    },
+    {
+      "name": "audio · score and ambience",
+      "status": "building",
+      "rounds": 1,
+      "gap": "Instrument BUILT — tools/audio-render.sh, the script audio.js renderOffline() promised in a comment but which nobody ever wrote. That missing script is why audio was never judged. Levels are healthy: peak -3.1 to -3.4 dBFS, rms -13 to -17, 98% non-silent, no clipping, no DC offset. FOUND: a content-independent broadband amplitude dip every 380-450ms (autocorrelation r=0.35-0.47) in all three ambient scenarios, visible as evenly spaced full-spectrum gaps. Proven NOT to be the renderer — identical at 4x finer stepping. Cause is in the audio graph and is not yet isolated."
+    },
+    {
+      "name": "quest · the 60-minute arc",
+      "status": "building",
+      "rounds": 1,
+      "gap": "BUILT: 10 beats — shore, wind, village, ride, shrine, camp, ambush, climb, duel, end. All verified firing in the running game with no page errors. Never critiqued."
+    }
+  ],
+  "shots": [
+    "720p-fixed.png",
+    "beat-village.png",
+    "00-opening.png",
+    "beat-duel.png",
+    "05-summit.png"
+  ]
+}

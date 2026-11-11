@@ -1,0 +1,142 @@
+{
+  "when": "2026-08-31T07:03:36.403Z",
+  "pageErrors": [],
+  "scenarios": [
+    {
+      "scenario": "ambience",
+      "seconds": 12,
+      "wav": "shots/audio/ambience.wav",
+      "wave": "shots/audio/ambience-wave.png",
+      "spec": "shots/audio/ambience-spectrogram.png",
+      "sampleRate": 44100,
+      "channels": 2,
+      "frames": 529200,
+      "stats": [
+        {
+          "peakDb": -3.317862624955433,
+          "rmsDb": -15.637951935785692,
+          "dcOffset": -0.0008722039376328954,
+          "clippedSamples": 0,
+          "nonSilentRatio": 0.9818764172335601
+        },
+        {
+          "peakDb": -3.1161910523939786,
+          "rmsDb": -14.359903856481996,
+          "dcOffset": -0.0009545548046368144,
+          "clippedSamples": 0,
+          "nonSilentRatio": 0.9822619047619048
+        }
+      ],
+      "mod": {
+        "periodMs": 450,
+        "correlation": 0.4289106750531936,
+        "depth": 0.7097431364942924
+      },
+      "verdict": [
+        "PERIODIC MODULATION 450ms (r=0.43, depth=71%)"
+      ],
+      "ffmpeg": []
+    },
+    {
+      "scenario": "combat",
+      "seconds": 12,
+      "wav": "shots/audio/combat.wav",
+      "wave": "shots/audio/combat-wave.png",
+      "spec": "shots/audio/combat-spectrogram.png",
+      "sampleRate": 44100,
+      "channels": 2,
+      "frames": 529200,
+      "stats": [
+        {
+          "peakDb": -3.0971688831038175,
+          "rmsDb": -13.388663767396245,
+          "dcOffset": -0.0007869731199123288,
+          "clippedSamples": 0,
+          "nonSilentRatio": 0.9806708238851096
+        },
+        {
+          "peakDb": -3.0585915721788197,
+          "rmsDb": -12.323568421587582,
+          "dcOffset": -0.0006610567797833448,
+          "clippedSamples": 0,
+          "nonSilentRatio": 0.9831821617535903
+        }
+      ],
+      "mod": {
+        "periodMs": 110,
+        "correlation": 0.21596395208634064,
+        "depth": 0.6816302902447404
+      },
+      "verdict": [],
+      "ffmpeg": []
+    },
+    {
+      "scenario": "night",
+      "seconds": 12,
+      "wav": "shots/audio/night.wav",
+      "wave": "shots/audio/night-wave.png",
+      "spec": "shots/audio/night-spectrogram.png",
+      "sampleRate": 44100,
+      "channels": 2,
+      "frames": 529200,
+      "stats": [
+        {
+          "peakDb": -3.3550590509259335,
+          "rmsDb": -16.397234325873995,
+          "dcOffset": -0.0005923903493757689,
+          "clippedSamples": 0,
+          "nonSilentRatio": 0.9817762660619803
+        },
+        {
+          "peakDb": -3.149336019567957,
+          "rmsDb": -15.696389925747676,
+          "dcOffset": -0.000622874511341027,
+          "clippedSamples": 0,
+          "nonSilentRatio": 0.9821560846560846
+        }
+      ],
+      "mod": {
+        "periodMs": 405,
+        "correlation": 0.3493673448287853,
+        "depth": 0.7377497819443245
+      },
+      "verdict": [],
+      "ffmpeg": []
+    },
+    {
+      "scenario": "shore",
+      "seconds": 12,
+      "wav": "shots/audio/shore.wav",
+      "wave": "shots/audio/shore-wave.png",
+      "spec": "shots/audio/shore-spectrogram.png",
+      "sampleRate": 44100,
+      "channels": 2,
+      "frames": 529200,
+      "stats": [
+        {
+          "peakDb": -3.162350533796106,
+          "rmsDb": -16.571956524576837,
+          "dcOffset": -0.0016988742393143313,
+          "clippedSamples": 0,
+          "nonSilentRatio": 0.9820011337868481
+        },
+        {
+          "peakDb": -3.1168032608389646,
+          "rmsDb": -15.591713795708417,
+          "dcOffset": -0.0009606162562016614,
+          "clippedSamples": 0,
+          "nonSilentRatio": 0.9822165532879819
+        }
+      ],
+      "mod": {
+        "periodMs": 380,
+        "correlation": 0.4689611117706843,
+        "depth": 0.7659195634426463
+      },
+      "verdict": [
+        "PERIODIC MODULATION 380ms (r=0.47, depth=77%)"
+      ],
+      "ffmpeg": []
+    }
+  ]
+}

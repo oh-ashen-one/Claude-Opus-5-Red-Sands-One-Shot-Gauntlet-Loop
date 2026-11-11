@@ -1,0 +1,14 @@
+{
+  "when": "2026-08-28T01:55:48.820Z",
+  "errors": [
+    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "shots": [
+    {
+      "id": "05-summit",
+      "fps": 98.9,
+      "note": "High vantage, full draw distance.",
+      "file": "shots/noao/05-summit.png"
+    }
+  ]
+}
