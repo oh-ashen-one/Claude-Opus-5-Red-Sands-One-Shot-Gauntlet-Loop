@@ -19,7 +19,7 @@ game.
 ## Give this to your agent
 
 ```text
-Clone https://github.com/Ashen-Builds/Claude-Opus-5-Red-Sands-One-Shot-Gauntlet-Loop.git (it is private, I already have access). It is about 900 MB because of the evidence images under shots/.
+Clone https://github.com/oh-ashen-one/Claude-Opus-5-Red-Sands-One-Shot-Gauntlet-Loop.git. It is about 900 MB because of the evidence images under shots/.
 Read README.md in full, then docs/FOUNDATION.md, docs/CRITIC-RUBRIC.md and CONTROLS.md.
 Then run npm install, start the game with npx vite --port 5810, and confirm the dev server starts and the page at http://localhost:5810/ loads. If the machine is slow, use http://localhost:5810/?q=low.
 Do not run the capture or lane tools (tools/shoot.mjs, tools/burst.mjs, tools/lane.sh) until I say so. They drive Chrome and the loop is heavy.
